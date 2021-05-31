@@ -10,34 +10,34 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
-import com.project.demo.model.Stock;
-import com.project.demo.repository.StockRepository;
+import com.project.demo.model.Tables;
+import com.project.demo.repository.TablesRepository;
 
 @Service
-public class StockService implements StockRepository{
+public class TablesService implements TablesRepository{
 
 	@Autowired
-	private StockRepository repository;
-
+	private TablesRepository repository;
+	
 	@Override
-	public List<Stock> findAll() {
+	public List<Tables> findAll() {
 		return repository.findAll();
 	}
 
 	@Override
-	public List<Stock> findAll(Sort sort) {
+	public List<Tables> findAll(Sort sort) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public List<Stock> findAllById(Iterable<Integer> ids) {
+	public List<Tables> findAllById(Iterable<Integer> ids) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public <S extends Stock> List<S> saveAll(Iterable<S> entities) {
+	public <S extends Tables> List<S> saveAll(Iterable<S> entities) {
 		// TODO Auto-generated method stub
 		return null;
 	}
@@ -49,13 +49,13 @@ public class StockService implements StockRepository{
 	}
 
 	@Override
-	public <S extends Stock> S saveAndFlush(S entity) {
+	public <S extends Tables> S saveAndFlush(S entity) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public void deleteInBatch(Iterable<Stock> entities) {
+	public void deleteInBatch(Iterable<Tables> entities) {
 		// TODO Auto-generated method stub
 		
 	}
@@ -67,37 +67,37 @@ public class StockService implements StockRepository{
 	}
 
 	@Override
-	public Stock getOne(Integer id) {
+	public Tables getOne(Integer id) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public <S extends Stock> List<S> findAll(Example<S> example) {
+	public <S extends Tables> List<S> findAll(Example<S> example) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public <S extends Stock> List<S> findAll(Example<S> example, Sort sort) {
+	public <S extends Tables> List<S> findAll(Example<S> example, Sort sort) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public Page<Stock> findAll(Pageable pageable) {
+	public Page<Tables> findAll(Pageable pageable) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public <S extends Stock> S save(S entity) {
+	public <S extends Tables> S save(S entity) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public Optional<Stock> findById(Integer id) {
+	public Optional<Tables> findById(Integer id) {
 		// TODO Auto-generated method stub
 		return null;
 	}
@@ -121,13 +121,13 @@ public class StockService implements StockRepository{
 	}
 
 	@Override
-	public void delete(Stock entity) {
+	public void delete(Tables entity) {
 		// TODO Auto-generated method stub
 		
 	}
 
 	@Override
-	public void deleteAll(Iterable<? extends Stock> entities) {
+	public void deleteAll(Iterable<? extends Tables> entities) {
 		// TODO Auto-generated method stub
 		
 	}
@@ -139,26 +139,27 @@ public class StockService implements StockRepository{
 	}
 
 	@Override
-	public <S extends Stock> Optional<S> findOne(Example<S> example) {
+	public <S extends Tables> Optional<S> findOne(Example<S> example) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public <S extends Stock> Page<S> findAll(Example<S> example, Pageable pageable) {
+	public <S extends Tables> Page<S> findAll(Example<S> example, Pageable pageable) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public <S extends Stock> long count(Example<S> example) {
+	public <S extends Tables> long count(Example<S> example) {
 		// TODO Auto-generated method stub
 		return 0;
 	}
 
 	@Override
-	public <S extends Stock> boolean exists(Example<S> example) {
+	public <S extends Tables> boolean exists(Example<S> example) {
 		// TODO Auto-generated method stub
 		return false;
 	}
+
 }

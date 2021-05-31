@@ -1,38 +1,30 @@
 package com.project.demo.model;
 
-import java.util.List;
-
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.ManyToMany;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "author")
-public class Author {
-	
+@Table(name = "artwork_availability")
+public class ArtworkAvailability {
+
 	//Variables statement
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private int id;
 	private String name;
 	
-	@ManyToMany(mappedBy = "author")
-	private List<Artwork> artwork;
-	
 	//Constructor
-	public Author() {
+	public ArtworkAvailability() {
 		super();
 	}
-	
-	public Author(String name, List<Artwork> artwork) {
+	public ArtworkAvailability(String name) {
 		super();
 		this.name = name;
-		this.artwork = artwork;
 	}
-
+	
 	//Getters and Setters
 	public int getId() {
 		return id;
@@ -45,11 +37,5 @@ public class Author {
 	}
 	public void setName(String name) {
 		this.name = name;
-	}
-	public List<Artwork> getStock() {
-		return artwork;
-	}
-	public void setStock(List<Artwork> artwork) {
-		this.artwork = artwork;
 	}
 }
