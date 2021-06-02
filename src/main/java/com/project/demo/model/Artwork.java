@@ -24,6 +24,7 @@ public class Artwork {
 	private int id;
 	private String name;
 	private String picture;
+	private String description;
 	private int value;
 	
 	@ManyToMany(cascade = CascadeType.ALL)
@@ -48,15 +49,17 @@ public class Artwork {
 	public Artwork() {
 		super();
 	}
-	public Artwork(String name, String picture, int value, List<Author> author, ArtworkType artworkType,
-			ArtworkCategory artworkCategory) {
+	public Artwork(String name, String picture, String description, int value, List<Author> author, ArtworkType artworkType,
+			ArtworkCategory artworkCategory, ArtworkAvailability artworkAvailability) {
 		super();
 		this.name = name;
 		this.picture = picture;
+		this.description = description;
 		this.value = value;
 		this.author = author;
 		this.artworkType = artworkType;
 		this.artworkCategory = artworkCategory;
+		this.artworkAvailability = artworkAvailability;
 	}
 	
 	//Getters and Setters
@@ -77,6 +80,12 @@ public class Artwork {
 	}
 	public void setPicture(String picture) {
 		this.picture = picture;
+	}
+	public String getDescription() {
+		return description;
+	}
+	public void setDescription(String description) {
+		this.description = description;
 	}
 	public int getValue() {
 		return value;
@@ -101,5 +110,11 @@ public class Artwork {
 	}
 	public void setArtworkCategory(ArtworkCategory artworkCategory) {
 		this.artworkCategory = artworkCategory;
+	}
+	public ArtworkAvailability getArtworkAvailability() {
+		return artworkAvailability;
+	}
+	public void setArtworkAvailability(ArtworkAvailability artworkAvailability) {
+		this.artworkAvailability = artworkAvailability;
 	}
 }

@@ -93,7 +93,7 @@ public class AuthorService implements AuthorRepository{
 	@Override
 	public <S extends Author> S save(S entity) {
 		// TODO Auto-generated method stub
-		return null;
+		return repository.save(entity);
 	}
 
 	@Override

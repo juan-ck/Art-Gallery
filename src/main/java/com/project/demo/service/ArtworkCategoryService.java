@@ -93,7 +93,7 @@ public class ArtworkCategoryService implements ArtworkCategoryRepository{
 	@Override
 	public <S extends ArtworkCategory> S save(S entity) {
 		// TODO Auto-generated method stub
-		return null;
+		return repository.save(entity);
 	}
 
 	@Override

@@ -1,5 +1,6 @@
 package com.project.demo.service;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
@@ -11,6 +12,7 @@ import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
 import com.project.demo.model.User;
+import com.project.demo.model.UserType;
 import com.project.demo.repository.UserRepository;
 
 @Service
@@ -18,9 +20,10 @@ public class UserService implements UserRepository{
 
 	@Autowired
 	private UserRepository repository;
-	
+
 	@Override
 	public List<User> findAll() {
+		// TODO Auto-generated method stub
 		return repository.findAll();
 	}
 
@@ -162,4 +165,9 @@ public class UserService implements UserRepository{
 		return false;
 	}
 
+	@Override
+	public User findByUsername(String username) {
+		// TODO Auto-generated method stub
+		return null;
+	}
 }

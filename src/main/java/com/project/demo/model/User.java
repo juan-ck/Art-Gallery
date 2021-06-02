@@ -1,5 +1,6 @@
 package com.project.demo.model;
 
+import java.io.Serializable;
 import java.util.Date;
 
 import javax.persistence.CascadeType;
@@ -16,7 +17,7 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name = "person")
-public class User {
+public class User implements Serializable{
 
 	//Variables statement
 	@Id
@@ -24,6 +25,7 @@ public class User {
 	private int id;
 	private String name;
 	private String email;
+	@Column(name="username", unique = true)
 	private String username;
 	@Column(name = "password", nullable = false, length = 400)
 	private String password;

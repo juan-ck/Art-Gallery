@@ -93,7 +93,7 @@ public class ArtworkTypeService implements ArtworkTypeRepository{
 	@Override
 	public <S extends ArtworkType> S save(S entity) {
 		// TODO Auto-generated method stub
-		return null;
+		return repository.save(entity);
 	}
 
 	@Override

@@ -12,7 +12,7 @@ import com.project.demo.model.ArtworkCategory;
 import com.project.demo.service.ArtworkCategoryService;
 
 @RestController
-@RequestMapping ("/artwork-category")
+@RequestMapping ("/api/artwork-category")
 public class ArtworkCategoryController {
 
 	@Autowired
